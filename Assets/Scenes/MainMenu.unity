@@ -947,7 +947,7 @@ GameObject:
   - component: {fileID: 443299643}
   - component: {fileID: 443299642}
   m_Layer: 0
-  m_Name: AudioController
+  m_Name: AudioSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2524,7 +2524,7 @@ GameObject:
   - component: {fileID: 1260286451}
   - component: {fileID: 1260286450}
   m_Layer: 0
-  m_Name: AudioSource
+  m_Name: AudioController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3389,6 +3389,6 @@ SceneRoots:
   - {fileID: 905884059}
   - {fileID: 14107370}
   - {fileID: 266583002}
-  - {fileID: 1052938744}
   - {fileID: 443299643}
   - {fileID: 1260286451}
+  - {fileID: 1052938744}
