@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 62160b9ec76bd4e4db23ab3255ba79d2
+guid: beedac4838383da4781e87bddb85a97a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4801004498007066048
-    second: Avion_0
+      213: -5260506346123122657
+    second: dron1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Avion_0
+      name: dron1_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 0
-        width: 58
-        height: 64
+        x: 1
+        y: 1
+        width: 23
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0c583c4772890a240800000000000000
-      internalID: 4801004498007066048
+      spriteID: f18a4ac795deef6b0800000000000000
+      internalID: -5260506346123122657
       vertices: []
       indices: 
       edges: []
@@ -149,7 +149,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -157,7 +157,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Avion_0: 4801004498007066048
+      dron1_0: -5260506346123122657
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
