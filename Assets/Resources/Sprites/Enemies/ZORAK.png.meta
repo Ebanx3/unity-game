@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: b80bd9902a257074eb0a94ac32e0f8b7
+guid: 3bef29e547f008f42a124784347ba4f9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1743493066260812220
-    second: Mar_sprite_sheet_0
-  - first:
-      213: -6919092501968142442
-    second: Mar_sprite_sheet_1
+      213: 4945433259374804008
+    second: ZORAK_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,10 +48,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 60
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -129,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mar_sprite_sheet_0
+      name: ZORAK_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 166
-        height: 228
+        x: 4
+        y: 3
+        width: 55
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,29 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cb115d2d4b1223810800000000000000
-      internalID: 1743493066260812220
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mar_sprite_sheet_1
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 0
-        width: 166
-        height: 228
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 69fbe1447027aff90800000000000000
-      internalID: -6919092501968142442
+      spriteID: 82cff6de855b1a440800000000000000
+      internalID: 4945433259374804008
       vertices: []
       indices: 
       edges: []
@@ -173,7 +149,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 9c8c6406129c2c04cb9ebe6d043513ba
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -181,8 +157,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Mar_sprite_sheet_0: 1743493066260812220
-      Mar_sprite_sheet_1: -6919092501968142442
+      ZORAK_0: 4945433259374804008
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
