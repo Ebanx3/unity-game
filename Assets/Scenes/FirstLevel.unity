@@ -439,7 +439,19 @@ MonoBehaviour:
     m_ActionId: 9f5015b2-ef7f-4eae-b4a2-c28e88eb0fff
     m_ActionName: Base/Movement
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 314620648}
+        m_TargetAssemblyTypeName: CombatActions, Assembly-CSharp
+        m_MethodName: Shoot
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: ff475082-7f9e-489e-bb8c-e39e33423f2d
     m_ActionName: Base/Shoot
   - m_PersistentCalls:
@@ -511,7 +523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 0}
-  fireRange: 0
+  fireRange: 0.5
   shieldTime: 1
   shieldCoolDown: 3
   shield: {fileID: 1395279590}

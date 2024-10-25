@@ -7,13 +7,17 @@ using UnityEngine.UIElements;
 public class CombatActions : MonoBehaviour
 {
     [Header("Sistema de Disparo")]
+
     [SerializeField] private GameObject bullet;
+    private List<Bullet> bullets = new List<Bullet>();
     [SerializeField] private float fireRange;
+    private bool isShotting = false;
 
     [Header("Escudo")]
 
     [SerializeField] private float shieldTime;
     [SerializeField] private float shieldCoolDown;
+    [HideInInspector] public bool activeShield = false;
     private float sTimer;
     [SerializeField] private GameObject shield;
 
@@ -24,21 +28,37 @@ public class CombatActions : MonoBehaviour
 
     private void Update()
     {
-        //Shield Cooldown
+        Shoot();
+
+        //Shield Cooldown...
+
         sTimer += Time.deltaTime;
     }
 
-    //Mecanismo de Disparo
+    //Mecanismo de Disparo///////////////////////////////////////////
 
     public void Shoot(InputAction.CallbackContext callback)
     {
+        //Debug.Log(callback.phase);
         if(callback.performed)
+        {
+            isShotting = true;
+        }
+        else if(callback.canceled)
+        {
+            isShotting= false;
+        }
+    }
+
+    public void Shoot()
+    {
+        if(isShotting)
         {
 
         }
     }
 
-    //Mecanismo de Escudo...
+    //Mecanismo de Escudo/////////////////////////////////////////////
 
     public void Activate_Shield(InputAction.CallbackContext callback)
     {
@@ -56,9 +76,9 @@ public class CombatActions : MonoBehaviour
     public IEnumerator ShieldAction()
     {
         shield.SetActive(true);
-        Debug.Log("Se Activo Escudo");
+        activeShield = true;
         yield return new WaitForSeconds(shieldTime);
-        Debug.Log("Se desactivo Escudo");
+        activeShield = false;
         shield.SetActive(false);
         sTimer = 0f;
     }
