@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class Life : MonoBehaviour
@@ -13,7 +12,7 @@ public class Life : MonoBehaviour
     }
 
     public void ReceiveDamage (int amount){
-        // if(combatActions.activateShield)
+        if(combatActions.activeShield)
         life -= amount;
         if(life <= 0){
             Debug.Log("Ah me mueroo");
