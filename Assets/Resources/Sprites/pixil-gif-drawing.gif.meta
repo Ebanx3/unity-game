@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pixil-gif-drawing_0: -8674509673510450247
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
