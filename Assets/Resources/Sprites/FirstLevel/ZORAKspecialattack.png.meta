@@ -1,10 +1,40 @@
 fileFormatVersion: 2
-guid: ceb202f84001af245826ffd003e5e765
+guid: 89c40c2bdfce52f4885fb04d45f2ef15
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6935705413321858465
-    second: background-sea_0
+      213: 3088921014668987568
+    second: ZORAKspecialattack_0
+  - first:
+      213: -2614629704624472700
+    second: ZORAKspecialattack_1
+  - first:
+      213: 8672689924780755146
+    second: ZORAKspecialattack_2
+  - first:
+      213: -3446416423016768144
+    second: ZORAKspecialattack_3
+  - first:
+      213: -4776686757279122290
+    second: ZORAKspecialattack_4
+  - first:
+      213: -7874077867678808641
+    second: ZORAKspecialattack_5
+  - first:
+      213: 3093404420004996716
+    second: ZORAKspecialattack_6
+  - first:
+      213: 3313540001288728431
+    second: ZORAKspecialattack_7
+  - first:
+      213: -4123014580534819518
+    second: ZORAKspecialattack_8
+  - first:
+      213: -1491118112830364823
+    second: ZORAKspecialattack_9
+  - first:
+      213: -1211594741937838470
+    second: ZORAKspecialattack_10
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -48,10 +78,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,13 +156,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: background-sea_0
+      name: ZORAKspecialattack_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2592
-        width: 162
-        height: 288
+        x: 4
+        y: 259
+        width: 55
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,197 +170,218 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1ad9dc39353904060800000000000000
-      internalID: 6935705413321858465
+      spriteID: 0bc859a0c4d0eda20800000000000000
+      internalID: 3088921014668987568
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background-sea_1
+      name: ZORAKspecialattack_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2304
-        width: 162
-        height: 288
+        x: 68
+        y: 259
+        width: 55
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: bb10caf2093d25f4abf4d6e14b391ad5
-      internalID: -607077135
+      spriteID: 48d7ca4f228f6bbd0800000000000000
+      internalID: -2614629704624472700
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background-sea_2
+      name: ZORAKspecialattack_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2016
-        width: 162
-        height: 288
+        x: 132
+        y: 255
+        width: 55
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: fb5c0a972f61db844aa46b0e6d19d05b
-      internalID: -1889534845
+      spriteID: ac88aa569859b5870800000000000000
+      internalID: 8672689924780755146
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background-sea_3
+      name: ZORAKspecialattack_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1728
-        width: 162
-        height: 288
+        x: 4
+        y: 196
+        width: 55
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 1d61c743710aa6b439f42ce15fad3f40
-      internalID: 1041715880
+      spriteID: 07d530ee58edb20d0800000000000000
+      internalID: -3446416423016768144
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background-sea_4
+      name: ZORAKspecialattack_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1440
-        width: 162
-        height: 288
+        x: 67
+        y: 197
+        width: 57
+        height: 52
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 3ccc12ca83c3fe24b9f619efce72cc44
-      internalID: -240780348
+      spriteID: e8cb015c3bcc5bdb0800000000000000
+      internalID: -4776686757279122290
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background-sea_5
+      name: ZORAKspecialattack_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1152
-        width: 162
-        height: 288
+        x: 129
+        y: 198
+        width: 61
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e1bfa36728896f34ebe555c2bf324a50
-      internalID: -1491351303
+      spriteID: fb54d33e5e7a9b290800000000000000
+      internalID: -7874077867678808641
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background-sea_6
+      name: ZORAKspecialattack_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 864
-        width: 162
-        height: 288
+        x: 1
+        y: 134
+        width: 61
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 7f40879bd7d128c4fab796c11a1681df
-      internalID: 1083042108
+      spriteID: c6665013eeafdea20800000000000000
+      internalID: 3093404420004996716
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background-sea_7
+      name: ZORAKspecialattack_7
       rect:
         serializedVersion: 2
-        x: 0
-        y: 576
-        width: 162
-        height: 288
+        x: 65
+        y: 134
+        width: 61
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: c8e2ac5f79bec374db72ce6680a0b6ad
-      internalID: -10271870
+      spriteID: f6facd5431f0cfd20800000000000000
+      internalID: 3313540001288728431
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background-sea_8
+      name: ZORAKspecialattack_8
       rect:
         serializedVersion: 2
-        x: 0
-        y: 288
-        width: 162
-        height: 288
+        x: 129
+        y: 134
+        width: 61
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 601313a48dd9aa4449e83f924d0de0fa
-      internalID: -1907878826
+      spriteID: 245477b651c18c6c0800000000000000
+      internalID: -4123014580534819518
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background-sea_9
+      name: ZORAKspecialattack_9
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 0
-        width: 162
-        height: 288
+        width: 61
+        height: 121
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e9b7b90b14d18674e8b84228d6645f61
-      internalID: -1822946948
+      spriteID: 96368960afb7e4be0800000000000000
+      internalID: -1491118112830364823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZORAKspecialattack_10
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 92
+        width: 55
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a766013600d8f2fe0800000000000000
+      internalID: -1211594741937838470
       vertices: []
       indices: 
       edges: []
@@ -338,7 +389,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 37776338cd7fc284d8c5f89347d815d7
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -346,16 +397,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      background-sea_0: 6935705413321858465
-      background-sea_1: -607077135
-      background-sea_2: -1889534845
-      background-sea_3: 1041715880
-      background-sea_4: -240780348
-      background-sea_5: -1491351303
-      background-sea_6: 1083042108
-      background-sea_7: -10271870
-      background-sea_8: -1907878826
-      background-sea_9: -1822946948
+      ZORAKspecialattack_0: 3088921014668987568
+      ZORAKspecialattack_1: -2614629704624472700
+      ZORAKspecialattack_10: -1211594741937838470
+      ZORAKspecialattack_2: 8672689924780755146
+      ZORAKspecialattack_3: -3446416423016768144
+      ZORAKspecialattack_4: -4776686757279122290
+      ZORAKspecialattack_5: -7874077867678808641
+      ZORAKspecialattack_6: 3093404420004996716
+      ZORAKspecialattack_7: 3313540001288728431
+      ZORAKspecialattack_8: -4123014580534819518
+      ZORAKspecialattack_9: -1491118112830364823
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
