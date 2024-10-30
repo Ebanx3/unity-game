@@ -72,7 +72,6 @@ public class CombatActions : MonoBehaviour
         {
             if (sTimer >= shieldCoolDown)
             {
-                Debug.Log("Entro");
                 StartCoroutine(ShieldAction());
             }
         }
