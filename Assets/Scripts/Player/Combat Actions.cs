@@ -44,7 +44,6 @@ public class CombatActions : MonoBehaviour
 
     public void Shoot(InputAction.CallbackContext callback)
     {
-        //Debug.Log(callback.phase);
         if (callback.performed)
         {
             isShotting = true;
@@ -67,7 +66,6 @@ public class CombatActions : MonoBehaviour
 
     public void Activate_Shield(InputAction.CallbackContext callback)
     {
-        //Debug.Log("Antes if");
         if (callback.performed)
         {
             if (sTimer >= shieldCoolDown)
