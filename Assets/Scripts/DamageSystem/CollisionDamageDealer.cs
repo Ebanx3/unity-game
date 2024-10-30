@@ -4,7 +4,7 @@ public class CollisionDamageDealer : DamageDealer
 {
     private void Start()
     {
-        damageType = DamageType.Collision;
+        // damageType = DamageType.Collision;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -13,17 +13,17 @@ public class CollisionDamageDealer : DamageDealer
 
         if (damageable != null)
         {
-            Debug.Log("Colisión con el jugador. Aplicando daño.");
+            Debug.Log("Colisiï¿½n con el jugador. Aplicando daï¿½o.");
             DealDamage(damageable);
         }
         else
         {
-            Debug.Log("Colisión con un objeto que no puede recibir daño.");
+            Debug.Log("Colisiï¿½n con un objeto que no puede recibir daï¿½o.");
         }
     }
 
     protected override void HandleCollision(Collider2D collider)
     {
-        // Lógica personalizada de colisión, si es necesario
+        // Lï¿½gica personalizada de colisiï¿½n, si es necesario
     }
 }

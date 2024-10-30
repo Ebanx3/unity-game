@@ -1,17 +1,16 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UIElements;
 
 public class CombatActions : MonoBehaviour
 {
     [Header("Sistema de Disparo")]
 
     [SerializeField] private GameObject bullet;
-    private List<Bullet> bullets = new List<Bullet>();
-    [SerializeField] private float fireRange;
+    // private List<GameObject> bullets = new List<GameObject>();
     private bool isShotting = false;
+    [SerializeField] private float fireRate;
+    private float lastShootTime;
 
     [Header("Escudo")]
 
@@ -24,14 +23,20 @@ public class CombatActions : MonoBehaviour
     private void Start()
     {
         sTimer = shieldCoolDown;
+        // bullets.Add()
     }
 
     private void Update()
     {
-        Shoot();
+        if (lastShootTime > fireRate)
+        {
+            Vector3 position = transform.position;
+            Shoot(position);
+            lastShootTime = 0;
+        }
 
         //Shield Cooldown...
-
+        lastShootTime += Time.deltaTime;
         sTimer += Time.deltaTime;
     }
 
@@ -40,21 +45,21 @@ public class CombatActions : MonoBehaviour
     public void Shoot(InputAction.CallbackContext callback)
     {
         //Debug.Log(callback.phase);
-        if(callback.performed)
+        if (callback.performed)
         {
             isShotting = true;
         }
-        else if(callback.canceled)
+        else if (callback.canceled)
         {
-            isShotting= false;
+            isShotting = false;
         }
     }
 
-    public void Shoot()
+    public void Shoot(Vector3 position)
     {
-        if(isShotting)
+        if (isShotting)
         {
-
+            Instantiate(bullet, position, Quaternion.identity);
         }
     }
 
@@ -63,9 +68,9 @@ public class CombatActions : MonoBehaviour
     public void Activate_Shield(InputAction.CallbackContext callback)
     {
         //Debug.Log("Antes if");
-        if(callback.performed)
+        if (callback.performed)
         {
-            if(sTimer >= shieldCoolDown)
+            if (sTimer >= shieldCoolDown)
             {
                 Debug.Log("Entro");
                 StartCoroutine(ShieldAction());

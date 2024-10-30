@@ -3,14 +3,14 @@ using UnityEngine;
 public abstract class DamageDealer : MonoBehaviour
 {
     public int damageAmount = 10;
-    public DamageType damageType;
+    // public DamageType damageType;
 
-    // Método para aplicar daño a un objeto que implemente IDamageable
+    // Mï¿½todo para aplicar daï¿½o a un objeto que implemente IDamageable
     protected void DealDamage(IDamageable target)
     {
-        target.TakeDamage(damageAmount, damageType);
+        target.TakeDamage(damageAmount);
     }
 
-    // Método abstracto para manejar colisiones o detección de daño
+    // Mï¿½todo abstracto para manejar colisiones o detecciï¿½n de daï¿½o
     protected abstract void HandleCollision(Collider2D collider);
 }

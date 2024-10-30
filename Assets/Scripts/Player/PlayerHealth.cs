@@ -1,14 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerHealth : MonoBehaviour, IDamageable
+public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 100;
     private int currentHealth;
 
     public Slider healthSlider;
 
-    // Atributo público para mostrar la salud actual
+    // Atributo pï¿½blico para mostrar la salud actual
     public int CurrentHealth => currentHealth; // Propiedad para obtener la salud actual
 
     void Start()
@@ -17,30 +17,30 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         UpdateHealthUI();
     }
 
-    public void TakeDamage(int damage, DamageType damageType)
-    {
-        // Aquí puedes agregar lógica adicional basada en el tipo de daño si es necesario
-        switch (damageType)
-        {
-            case DamageType.Collision:
-                Debug.Log($"Daño por colisión recibido: {damage}");
-                break;
-            case DamageType.Bullet:
-                Debug.Log($"Daño por bala recibido: {damage}");
-                break;
-        }
+    // public void TakeDamage(int damage, DamageType damageType)
+    // {
+    //     // Aquï¿½ puedes agregar lï¿½gica adicional basada en el tipo de daï¿½o si es necesario
+    //     switch (damageType)
+    //     {
+    //         case DamageType.Collision:
+    //             Debug.Log($"Daï¿½o por colisiï¿½n recibido: {damage}");
+    //             break;
+    //         case DamageType.Bullet:
+    //             Debug.Log($"Daï¿½o por bala recibido: {damage}");
+    //             break;
+    //     }
 
-        currentHealth -= damage;
-        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-        UpdateHealthUI();
+    //     currentHealth -= damage;
+    //     currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+    //     UpdateHealthUI();
 
-        Debug.Log($"Salud actual: {currentHealth}/{maxHealth}");
+    //     Debug.Log($"Salud actual: {currentHealth}/{maxHealth}");
 
-        if (currentHealth <= 0)
-        {
-            Die();
-        }
-    }
+    //     if (currentHealth <= 0)
+    //     {
+    //         Die();
+    //     }
+    // }
 
     private void Die()
     {
