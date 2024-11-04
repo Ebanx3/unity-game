@@ -2,15 +2,18 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] private float speed = 15f;
+    [SerializeField] private float speed = 20f;
     [SerializeField] private int damage = 10;
     [SerializeField] private float lifetime = 2f;
     private float timer = 0f;
 
     private void Update()
     {
-        if (timer >= lifetime)
-            Destroy(this.gameObject);
+        if (timer >= lifetime){
+            timer = 0;
+            gameObject.SetActive(false);
+
+        }
 
         timer += Time.deltaTime;
 
@@ -23,7 +26,7 @@ public class Bullet : MonoBehaviour
         {
             collider.GetComponent<Damageable>().TakeDamage(damage);
         }
-        Destroy(this.gameObject);
+        gameObject.SetActive(false);
     }
 }
 

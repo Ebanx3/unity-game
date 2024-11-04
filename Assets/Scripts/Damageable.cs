@@ -6,17 +6,14 @@ using UnityEngine;
 public class Damageable : MonoBehaviour
 {
     [SerializeField]private int lifePoints;
+    private bool isPlayer;
 
-    /// <summary>
-    /// Method to receive damage 
-    /// </summary>
-    /// <param name="amount">The amount of damage that the object will receive</param>
+    void Start(){
+        isPlayer = gameObject.CompareTag("Player");
+    }
+
     public void TakeDamage(int amount){
-        if(gameObject.tag == "Player"){
-            if(GetComponent<CombatActions>().activeShield){
-                return;
-            }
-        }
+        if(isPlayer && GetComponent<CombatActions>().activeShield) return;
 
         lifePoints -= amount;
         if(lifePoints <= 0){
@@ -25,6 +22,6 @@ public class Damageable : MonoBehaviour
     }
 
     private void Die(){
-        Destroy(this.gameObject);        
+        gameObject.SetActive(false);    
     }
 }

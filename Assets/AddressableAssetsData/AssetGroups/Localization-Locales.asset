@@ -15,16 +15,16 @@ MonoBehaviour:
   m_GroupName: Localization-Locales
   m_Data:
     m_SerializedData: []
-  m_GUID: 44dfa8482ff298d4cb2fa1ce341400f2
+  m_GUID: 6041173cfe00683469df60d992f023c8
   m_SerializeEntries:
-  - m_GUID: 724463f067a373c408e7b7a754a4e156
-    m_Address: English (en)
+  - m_GUID: d847f616a4797ba4db31e41484bb48c3
+    m_Address: Spanish (es)
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d847f616a4797ba4db31e41484bb48c3
-    m_Address: Spanish (es)
+  - m_GUID: 724463f067a373c408e7b7a754a4e156
+    m_Address: English (en)
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale
@@ -33,5 +33,5 @@ MonoBehaviour:
   m_Settings: {fileID: 11400000, guid: da0497a5793965f469208a6aac5fcd7b, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: 4802355f7ff325d47a3289cb5d9090a3, type: 2}
-    - {fileID: 11400000, guid: e22c34eb7e8ec8c4aa447b14befc37e3, type: 2}
+    - {fileID: 11400000, guid: d04827830e155a244a15dc4536e41c74, type: 2}
+    - {fileID: 11400000, guid: 03b0eadb8133d32448ea9ecf051ff78c, type: 2}

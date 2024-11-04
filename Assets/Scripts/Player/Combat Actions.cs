@@ -5,9 +5,7 @@ using UnityEngine.InputSystem;
 public class CombatActions : MonoBehaviour
 {
     [Header("Sistema de Disparo")]
-
-    [SerializeField] private GameObject bullet;
-    // private List<GameObject> bullets = new List<GameObject>();
+    [SerializeField] private BulletPool BulletsPool;
     private bool isShotting = false;
     [SerializeField] private float fireRate;
     private float lastShootTime;
@@ -23,15 +21,14 @@ public class CombatActions : MonoBehaviour
     private void Start()
     {
         sTimer = shieldCoolDown;
-        // bullets.Add()
+        BulletsPool = GameObject.Find("BulletsPool").GetComponent<BulletPool>();
     }
 
     private void Update()
     {
-        if (lastShootTime > fireRate)
+        if (lastShootTime >= fireRate)
         {
-            Vector3 position = transform.position;
-            Shoot(position);
+            Shoot();
             lastShootTime = 0;
         }
 
@@ -54,11 +51,12 @@ public class CombatActions : MonoBehaviour
         }
     }
 
-    public void Shoot(Vector3 position)
+    public void Shoot()
     {
         if (isShotting)
         {
-            Instantiate(bullet, position, Quaternion.identity);
+            GameObject bullet = BulletsPool.InstantiateBullet();
+            bullet.transform.position = transform.position + Vector3.up * 2;
         }
     }
 

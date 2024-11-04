@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 5570095282e447046bb58d381fcec4cc
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - dronPrefab: {fileID: 1375817016214995247, guid: af5db999450535743b03838ea215cf13, type: 3}
+  - cazaPrefab: {fileID: 5387114125922623828, guid: 3f4abfdf9a2b33a4fbc4a65631774568, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
