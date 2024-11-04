@@ -6,16 +6,16 @@ public class Movement : MonoBehaviour
 {
     private PlayerInput playerInput;
     private Vector2 input;
-    private Camera mainCamera;
+
     private Vector2 screenBounds;
+
     [SerializeField] private float movementSpeed = 5f;
     [SerializeField]private bool invertedMovement = false;
 
     void Start()
     {
         playerInput = GetComponent<PlayerInput>();
-        mainCamera = Camera.main;
-        screenBounds = mainCamera.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, mainCamera.transform.position.z));
+        screenBounds = GetComponentInParent<CameraMovement>().ScreenBounds;
     }
 
     void Update()

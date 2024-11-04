@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5910476858624372661}
   - component: {fileID: 7804961094948553023}
   - component: {fileID: 980081281067954682}
+  - component: {fileID: -5562726587793098990}
   m_Layer: 0
   m_Name: dron
   m_TagString: Enemy
@@ -147,3 +148,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifePoints: 10
+--- !u!114 &-5562726587793098990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375817016214995247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dd6a4d69bfa80459996bc47a1b8657, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 3
