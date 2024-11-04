@@ -25,6 +25,7 @@ public class StartLevel : MonoBehaviour
         yield return new WaitForSeconds(1.2f);
         startingLevel = false;
         Instantiate(canvasPrefab, transform.position, Quaternion.identity); 
+        player.GetComponent<Movement>().enabled = true;
         this.enabled = false;
     }
 }
