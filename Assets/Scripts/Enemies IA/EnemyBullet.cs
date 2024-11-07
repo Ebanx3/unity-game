@@ -1,9 +1,10 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class EnemyBullet : MonoBehaviour
 {
-    [SerializeField] private float speed = 20f;
+    [SerializeField] private float speed = 10f;
     [SerializeField] private int damage = 10;
     [SerializeField] private float lifetime = 2f;
     private Animator animator;
@@ -25,12 +26,12 @@ public class Bullet : MonoBehaviour
 
         timer += Time.deltaTime;
 
-        transform.position = new Vector3(transform.position.x, transform.position.y + speed * Time.deltaTime, 0);
+        transform.position = new Vector3(transform.position.x, transform.position.y - speed * Time.deltaTime, 0);
     }
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.gameObject.CompareTag("Enemy"))
+        if (collider.gameObject.CompareTag("Player"))
         {
             collider.GetComponent<Damageable>().TakeDamage(damage);
             animator.SetTrigger("Collision");
@@ -44,4 +45,3 @@ public class Bullet : MonoBehaviour
         gameObject.SetActive(false);
     }
 }
-

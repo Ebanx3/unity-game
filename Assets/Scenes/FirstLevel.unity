@@ -234,7 +234,6 @@ GameObject:
   - component: {fileID: 314620646}
   - component: {fileID: 314620647}
   - component: {fileID: 314620648}
-  - component: {fileID: 314620650}
   - component: {fileID: 314620651}
   - component: {fileID: 314620652}
   - component: {fileID: 314620653}
@@ -441,26 +440,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbd30307a01729d4591c3752458f20a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BulletsPool: {fileID: 0}
   fireRate: 0.2
   shieldTime: 1
   shieldCoolDown: 3
   activeShield: 0
   shield: {fileID: 1920197715}
---- !u!114 &314620650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 314620642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1861966831e46f14a84552e28fab8539, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  healthSlider: {fileID: 0}
 --- !u!61 &314620651
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -543,9 +527,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 314620642}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: ceec41879bf6bf04eb24f3d07eb089d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+  m_Script: {fileID: 11500000, guid: 88b8b4f744484b34f9c6ac786007d90d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifePoints: 50
+>>>>>>> 3e32509cb62302aa645d5fffb18f00ac393bcdce
 --- !u!1 &384741547
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,6 +685,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 809371621}
   player: {fileID: 314620643}
+--- !u!1 &623644475
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 623644477}
+  - component: {fileID: 623644476}
+  m_Layer: 0
+  m_Name: EnemiesBulletsPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &623644476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623644475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0652a908e1051b146b2268f41a13b529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 5494821678298111767, guid: 2d4012904dd32754a80ea48c0709391a, type: 3}
+  bullets: []
+  bulletsPoolSize: 40
+--- !u!4 &623644477
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623644475}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.013123933, y: 37.654785, z: -0.004297084}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &634701614
 GameObject:
   m_ObjectHideFlags: 0
@@ -832,7 +870,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
+  m_BackGroundColor: {r: 0.12677999, g: 0.41131696, b: 0.7264151, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1636,3 +1674,4 @@ SceneRoots:
   - {fileID: 886257420}
   - {fileID: 1838560954}
   - {fileID: 384741549}
+  - {fileID: 623644477}
