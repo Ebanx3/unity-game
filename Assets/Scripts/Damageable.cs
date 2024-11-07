@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 /// <summary>
@@ -5,23 +6,45 @@ using UnityEngine;
 /// </summary>
 public class Damageable : MonoBehaviour
 {
-    [SerializeField]private int lifePoints;
+    [SerializeField] private int lifePoints;
+    private Animator animator;
     private bool isPlayer;
 
-    void Start(){
+    void Start()
+    {
         isPlayer = gameObject.CompareTag("Player");
+        animator = GetComponent<Animator>();
     }
 
-    public void TakeDamage(int amount){
-        if(isPlayer && GetComponent<CombatActions>().activeShield) return;
+    public void TakeDamage(int amount)
+    {
+        if (isPlayer && GetComponent<CombatActions>().activeShield) return;
 
         lifePoints -= amount;
-        if(lifePoints <= 0){
+        if (lifePoints <= 0)
+        {
             Die();
-        }   
+        }
     }
 
-    private void Die(){
-        gameObject.SetActive(false);    
+    private void Die()
+    {
+        if (!isPlayer)
+        {
+
+            StartCoroutine(DieCoroutine());
+        }
+        else
+        {
+            Debug.Log("Ah me muero");
+        }
+    }
+
+    IEnumerator DieCoroutine()
+    {
+        animator.SetTrigger("explosion");
+        yield return new WaitForSeconds(.3f);
+        gameObject.SetActive(false);
+
     }
 }

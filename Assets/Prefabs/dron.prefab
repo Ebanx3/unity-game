@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7804961094948553023}
   - component: {fileID: 980081281067954682}
   - component: {fileID: -5562726587793098990}
+  - component: {fileID: 496291719141285228}
   m_Layer: 0
   m_Name: dron
   m_TagString: Enemy
@@ -162,3 +163,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 3
   fireRate: 3
+--- !u!95 &496291719141285228
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375817016214995247}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9a51041bb59a9d740b47bfe23bf2a1b2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
