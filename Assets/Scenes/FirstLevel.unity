@@ -237,6 +237,7 @@ GameObject:
   - component: {fileID: 314620651}
   - component: {fileID: 314620652}
   - component: {fileID: 314620653}
+  - component: {fileID: 314620654}
   m_Layer: 0
   m_Name: plane
   m_TagString: Player
@@ -527,16 +528,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 314620642}
   m_Enabled: 1
   m_EditorHideFlags: 0
-<<<<<<< HEAD
-  m_Script: {fileID: 11500000, guid: ceec41879bf6bf04eb24f3d07eb089d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-=======
   m_Script: {fileID: 11500000, guid: 88b8b4f744484b34f9c6ac786007d90d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   lifePoints: 50
->>>>>>> 3e32509cb62302aa645d5fffb18f00ac393bcdce
+--- !u!114 &314620654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314620642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceec41879bf6bf04eb24f3d07eb089d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &384741547
 GameObject:
   m_ObjectHideFlags: 0
