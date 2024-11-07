@@ -1,9 +1,11 @@
 using System.Collections;
 using UnityEngine;
 
+
 /// <summary>
 /// This class will add the lifePoints variable to handle the health of an object, and the methods TakeDamage and Die.
 /// </summary>
+[RequireComponent(typeof(Animator))]
 public class Damageable : MonoBehaviour
 {
     [SerializeField] private int lifePoints;
