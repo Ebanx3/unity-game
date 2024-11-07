@@ -10,7 +10,7 @@ public class Movement : MonoBehaviour
     private Vector2 screenBounds;
 
     [SerializeField] private float movementSpeed = 5f;
-    [SerializeField]private bool invertedMovement = false;
+    [SerializeField] private bool invertedMovement = false;
 
     void Start()
     {
@@ -43,4 +43,22 @@ public class Movement : MonoBehaviour
         yield return new WaitForSeconds(3f);
         invertedMovement = false;
     }
+
+    #region Save and Load
+    public void Save(ref MovementSaveData data)
+    { 
+        data.Position = transform.position;
+    }
+
+    public void Load(MovementSaveData data)
+    {
+        transform.position = data.Position;
+    }
+    #endregion
+}
+
+[System.Serializable]
+public struct MovementSaveData
+{
+    public Vector3 Position;
 }
