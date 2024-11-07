@@ -26,7 +26,12 @@ public class SaveSystem
     {
         HandleSaveData();
 
-        File.WriteAllText(SaveFileName(), JsonUtility.ToJson(_saveData, true));
+        //File.WriteAllText(SaveFileName(), JsonUtility.ToJson(_saveData, true));
+
+        string json = JsonUtility.ToJson(_saveData, true);
+        string encryptedData = EncryptionUtility.EncryptString(json);
+
+        File.WriteAllText(SaveFileName(), encryptedData);
     }
 
     #region Save Async
@@ -40,7 +45,12 @@ public class SaveSystem
     {
         HandleSaveData();
 
-        await File.WriteAllTextAsync(SaveFileName(), JsonUtility.ToJson(_saveData, true));
+        //await File.WriteAllTextAsync(SaveFileName(), JsonUtility.ToJson(_saveData, true));
+
+        string json = JsonUtility.ToJson(_saveData, true);
+        string encryptedData = EncryptionUtility.EncryptString(json);
+
+        File.WriteAllText(SaveFileName(), encryptedData);
     }
     #endregion
 
@@ -59,8 +69,10 @@ public class SaveSystem
     public static void Load()
     {
         string saveContent = File.ReadAllText(SaveFileName());
+        string decryptedContent = EncryptionUtility.DecryptString(saveContent);
+        _saveData = JsonUtility.FromJson<SaveData>(decryptedContent);
 
-        _saveData = JsonUtility.FromJson<SaveData>(saveContent);
+        //_saveData = JsonUtility.FromJson<SaveData>(saveContent);
         HandleLoadData();
     }
 
@@ -68,8 +80,10 @@ public class SaveSystem
     public static async Task LoadAsync()
     {
         string saveContent = File.ReadAllText(SaveFileName());
+        string decryptedContent = EncryptionUtility.DecryptString(saveContent);
+        _saveData = JsonUtility.FromJson<SaveData>(decryptedContent);
 
-        _saveData = JsonUtility.FromJson<SaveData>(saveContent);
+        //_saveData = JsonUtility.FromJson<SaveData>(saveContent);
 
         await HandleLoadDataAsync();
     }
