@@ -1,7 +1,7 @@
 using UnityEngine;
 
 /// <summary>
-/// This class will add the lifePoints variable to handle de health of an object, and the methods TakeDamage and Die.
+/// This class will add the lifePoints variable to handle the health of an object, and the methods TakeDamage and Die.
 /// </summary>
 public class Damageable : MonoBehaviour
 {

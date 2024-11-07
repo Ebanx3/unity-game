@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 5a8d9f44ee41a864cba0ca2c52db67ba
+guid: 3866740cc0d6c5d45893a0216f8b81f6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2346302928887187388
-    second: bullet_0
-  - first:
-      213: 5379323082974078785
-    second: bullet_1
-  - first:
-      213: -2863499236874410579
-    second: bullet_2
+      213: 6499875098722714487
+    second: enemybullet_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -57,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 12
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -132,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bullet_0
+      name: enemybullet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 6
-        height: 6
+        width: 5
+        height: 5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,50 +140,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 448783cdae1407fd0800000000000000
-      internalID: -2346302928887187388
+      spriteID: 77346c7e6f1343a50800000000000000
+      internalID: 6499875098722714487
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bullet_1
+      name: enemybullet_1
       rect:
         serializedVersion: 2
-        x: 6
+        x: 5
         y: 0
-        width: 6
-        height: 6
+        width: 5
+        height: 5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 147aab4d7d137aa40800000000000000
-      internalID: 5379323082974078785
+      spriteID: 593f4341bc8be9e4b9a23b38ac37071f
+      internalID: -1157585473
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bullet_2
+      name: enemybullet_2
       rect:
         serializedVersion: 2
-        x: 12
+        x: 10
         y: 0
-        width: 6
-        height: 6
+        width: 5
+        height: 5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: da5af739d9ec248d0800000000000000
-      internalID: -2863499236874410579
+      spriteID: 61aca28a3083cad4e846c4a42ab2705a
+      internalID: 1047686953
       vertices: []
       indices: 
       edges: []
@@ -197,7 +191,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ea271cc46eecf8849a3be9a66c847451
+    spriteID: b4483b8ef9d3429468fb28b47902ce06
     internalID: 0
     vertices: []
     indices: 
@@ -205,9 +199,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      bullet_0: -2346302928887187388
-      bullet_1: 5379323082974078785
-      bullet_2: -2863499236874410579
+      enemybullet_0: 6499875098722714487
+      enemybullet_1: -1157585473
+      enemybullet_2: 1047686953
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

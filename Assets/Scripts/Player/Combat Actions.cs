@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 public class CombatActions : MonoBehaviour
 {
     [Header("Sistema de Disparo")]
-    [SerializeField] private BulletPool BulletsPool;
+    private BulletPool BulletsPool;
     private bool isShotting = false;
     [SerializeField] private float fireRate;
     private float lastShootTime;
@@ -56,7 +56,7 @@ public class CombatActions : MonoBehaviour
         if (isShotting)
         {
             GameObject bullet = BulletsPool.InstantiateBullet();
-            bullet.transform.position = transform.position + Vector3.up * 2;
+            bullet.transform.position = transform.position + Vector3.up;
         }
     }
 
