@@ -12,6 +12,7 @@ public class SaveSystem
     {
         public MovementSaveData MovementData;
         public PointData PointData;
+        public SceneEnemyData EnemyData;
     }
 
     public static string SaveFileName()
@@ -31,6 +32,12 @@ public class SaveSystem
     {
         GameManager.Instance.Movement.Save(ref _saveData.MovementData);
         GameManager.Instance.PointManager.Save(ref _saveData.PointData);
+
+        EnemySpawnManager spawnManager = GameManager.FindAnyObjectByType<EnemySpawnManager>();
+        if (spawnManager != null)
+        {
+            spawnManager.Save(ref _saveData.EnemyData);
+        }
     }
 
     public static void Load()
@@ -45,5 +52,11 @@ public class SaveSystem
     {
         GameManager.Instance.Movement.Load(_saveData.MovementData);
         GameManager.Instance.PointManager.Load(_saveData.PointData);
+
+        EnemySpawnManager spawnManager = GameManager.FindAnyObjectByType<EnemySpawnManager>();
+        if (spawnManager != null )
+        {
+            spawnManager.Load(_saveData.EnemyData);
+        }
     }
 }
