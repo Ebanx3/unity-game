@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
 
     // Rebuild Player scripts logic for a correct operation by grouping all in one script called "Player"
     public Movement Movement { get; set; }
+    public PointManager PointManager { get; internal set; }
 
     private void Awake()
     {

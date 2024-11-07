@@ -11,6 +11,7 @@ public class SaveSystem
     public struct SaveData
     {
         public MovementSaveData MovementData;
+        public PointData PointData;
     }
 
     public static string SaveFileName()
@@ -29,6 +30,7 @@ public class SaveSystem
     private static void HandleSaveData()
     {
         GameManager.Instance.Movement.Save(ref _saveData.MovementData);
+        GameManager.Instance.PointManager.Save(ref _saveData.PointData);
     }
 
     public static void Load()
@@ -42,5 +44,6 @@ public class SaveSystem
     private static void HandleLoadData()
     {
         GameManager.Instance.Movement.Load(_saveData.MovementData);
+        GameManager.Instance.PointManager.Load(_saveData.PointData);
     }
 }
