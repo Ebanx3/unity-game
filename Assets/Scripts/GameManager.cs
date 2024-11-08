@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Threading.Tasks;
 
 public class GameManager : MonoBehaviour
 {
@@ -27,6 +28,10 @@ public class GameManager : MonoBehaviour
 
     // Rebuild Player scripts logic for a correct operation by grouping all in one script called "Player"
     public Movement Movement { get; set; }
+    public PointManager PointManager { get; internal set; }
+    public EnemySpawnManager EnemySpawnManager { get; set; }
+    private bool _isSaving;
+    private bool _isLoading;
 
     private void Awake()
     {
@@ -56,14 +61,28 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (Keyboard.current.numpad0Key.wasPressedThisFrame)
+        if (Keyboard.current.numpad0Key.wasPressedThisFrame && !_isSaving)
         {
-            SaveSystem.Save();
+            SaveAsync();
         }
 
-        if (Keyboard.current.numpad1Key.wasPressedThisFrame)
+        if (Keyboard.current.numpad1Key.wasPressedThisFrame && !_isLoading)
         {
-            SaveSystem.Load();
+            LoadAsync();
         }
+    }
+
+    private async void SaveAsync()
+    {
+        _isSaving = true;
+        await SaveSystem.SaveAsynchronously();
+        _isSaving = false;
+    }
+
+    private async void LoadAsync()
+    {
+        _isLoading = true;
+        await SaveSystem.LoadAsync();
+        _isLoading = false;
     }
 }
