@@ -8,7 +8,8 @@ using UnityEngine;
 [RequireComponent(typeof(Animator))]
 public class Damageable : MonoBehaviour
 {
-    [SerializeField] private int lifePoints;
+    [SerializeField] private int totalLifePoints;
+    [SerializeField] private int actualLifePoints;
     private Animator animator;
     private bool isPlayer;
 
@@ -16,14 +17,15 @@ public class Damageable : MonoBehaviour
     {
         isPlayer = gameObject.CompareTag("Player");
         animator = GetComponent<Animator>();
+        actualLifePoints = totalLifePoints;
     }
 
     public void TakeDamage(int amount)
     {
         if (isPlayer && GetComponent<CombatActions>().activeShield) return;
 
-        lifePoints -= amount;
-        if (lifePoints <= 0)
+        actualLifePoints -= amount;
+        if (actualLifePoints <= 0)
         {
             Die();
         }
@@ -48,5 +50,9 @@ public class Damageable : MonoBehaviour
         yield return new WaitForSeconds(.3f);
         gameObject.SetActive(false);
 
+    }
+
+    public float RelationTotalActualLP () {
+        return (float)actualLifePoints/(float)totalLifePoints;
     }
 }
