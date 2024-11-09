@@ -1,16 +1,22 @@
 fileFormatVersion: 2
-guid: fc9c06210acece849be354b3a0602d6b
+guid: 5996a468dfe81894880401598f1e36b9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5707218116961789024
-    second: ui_0
+      213: -5247708469848980278
+    second: powerups1_0
   - first:
-      213: 3556181715638617739
-    second: ui_1
+      213: -3993111092323435745
+    second: powerups1_1
   - first:
-      213: -8816031292267695619
-    second: ui_2
+      213: 3729132017507501033
+    second: powerups1_2
+  - first:
+      213: 1412985065421615082
+    second: powerups1_3
+  - first:
+      213: 1474264596956934483
+    second: powerups1_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -132,64 +138,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ui_0
+      name: powerups1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
-        width: 32
-        height: 32
+        x: 5
+        y: 6
+        width: 16
+        height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0646e25a3ac143f40800000000000000
-      internalID: 5707218116961789024
+      spriteID: ac4c7d143f46c27b0800000000000000
+      internalID: -5247708469848980278
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ui_1
+      name: powerups1_2
       rect:
         serializedVersion: 2
-        x: 39
-        y: 39
+        x: 27
+        y: 9
         width: 17
-        height: 17
+        height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b86016dcd681a5130800000000000000
-      internalID: 3556181715638617739
+      spriteID: 9e30218efc980c330800000000000000
+      internalID: 3729132017507501033
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ui_2
+      name: powerups1_3
       rect:
         serializedVersion: 2
-        x: 6
-        y: 8
-        width: 17
-        height: 17
+        x: 53
+        y: 2
+        width: 12
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: df1f7afbf3a27a580800000000000000
-      internalID: -8816031292267695619
+      spriteID: aef23614e6eeb9310800000000000000
+      internalID: 1412985065421615082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: powerups1_4
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 5
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3517d8607d3a57410800000000000000
+      internalID: 1474264596956934483
       vertices: []
       indices: 
       edges: []
@@ -197,7 +224,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 28a09b03cd8c0bc4eb125a3a063b9687
+    spriteID: cd9939c407ac6d2449c3477e5efc5900
     internalID: 0
     vertices: []
     indices: 
@@ -205,9 +232,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ui_0: 5707218116961789024
-      ui_1: 3556181715638617739
-      ui_2: -8816031292267695619
+      powerups1_0: -5247708469848980278
+      powerups1_1: -3993111092323435745
+      powerups1_2: 3729132017507501033
+      powerups1_3: 1412985065421615082
+      powerups1_4: 1474264596956934483
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

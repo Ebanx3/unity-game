@@ -1,15 +1,11 @@
 using System.Collections;
 using UnityEngine;
 
-
-/// <summary>
-/// This class will add the lifePoints variable to handle the health of an object, and the methods TakeDamage and Die.
-/// </summary>
 [RequireComponent(typeof(Animator))]
 public class Damageable : MonoBehaviour
 {
     [SerializeField] private int totalLifePoints;
-    [SerializeField] private int actualLifePoints;
+    private int actualLifePoints;
     private Animator animator;
     private bool isPlayer;
 
@@ -35,7 +31,6 @@ public class Damageable : MonoBehaviour
     {
         if (!isPlayer)
         {
-
             StartCoroutine(DieCoroutine());
         }
         else
@@ -46,13 +41,15 @@ public class Damageable : MonoBehaviour
 
     IEnumerator DieCoroutine()
     {
-        animator.SetTrigger("explosion");
+        animator.SetBool("explosion", true);
         yield return new WaitForSeconds(.3f);
+        animator.SetBool("explosion", false);
+        actualLifePoints = totalLifePoints;
         gameObject.SetActive(false);
-
     }
 
-    public float RelationTotalActualLP () {
-        return (float)actualLifePoints/(float)totalLifePoints;
+    public float RelationTotalActualLP()
+    {
+        return (float)actualLifePoints / (float)totalLifePoints;
     }
 }
