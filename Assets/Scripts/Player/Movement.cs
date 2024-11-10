@@ -6,6 +6,7 @@ public class Movement : MonoBehaviour
 {
     private PlayerInput playerInput;
     private Vector2 input;
+    private Animator animator;
 
     private Vector2 screenBounds;
 
@@ -16,15 +17,18 @@ public class Movement : MonoBehaviour
     {
         playerInput = GetComponent<PlayerInput>();
         screenBounds = GetComponentInParent<CameraMovement>().ScreenBounds;
+        animator = GetComponent<Animator>();
     }
 
     void Update()
     {
         input = playerInput.actions["Movement"].ReadValue<Vector2>();
         if(invertedMovement){
+            animator.SetFloat("horizontal", -input.x);
             transform.Translate(movementSpeed * Time.deltaTime * -input);
         }
         else{
+            animator.SetFloat("horizontal", input.x);
             transform.Translate(movementSpeed * Time.deltaTime * input);
         }
 
