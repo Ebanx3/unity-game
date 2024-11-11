@@ -9,11 +9,23 @@ public class Damageable : MonoBehaviour
     private Animator animator;
     private bool isPlayer;
 
+    private Score scoreManager;
     void Start()
     {
         isPlayer = gameObject.CompareTag("Player");
         animator = GetComponent<Animator>();
         actualLifePoints = totalLifePoints;
+        if (!isPlayer)
+        {
+            GameObject canvasInstance = GameObject.Find("Canvas(Clone)");
+            GameObject scoreTextObject = canvasInstance.transform.Find("scoreText").gameObject;
+            scoreManager = scoreTextObject.GetComponent<Score>();
+        }   
+
+
+        
+
+    
     }
 
     public void TakeDamage(int amount)
@@ -32,6 +44,7 @@ public class Damageable : MonoBehaviour
         if (!isPlayer)
         {
             StartCoroutine(DieCoroutine());
+            scoreManager.UpdateScore(10);
         }
         else
         {
