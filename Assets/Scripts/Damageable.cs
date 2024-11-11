@@ -8,8 +8,8 @@ public class Damageable : MonoBehaviour
     private int actualLifePoints;
     private Animator animator;
     private bool isPlayer;
-
     private Score scoreManager;
+    
     void Start()
     {
         isPlayer = gameObject.CompareTag("Player");
@@ -19,7 +19,9 @@ public class Damageable : MonoBehaviour
         {
             GameObject canvasInstance = GameObject.Find("Canvas(Clone)");
             GameObject scoreTextObject = canvasInstance.transform.Find("scoreText").gameObject;
+            
             scoreManager = scoreTextObject.GetComponent<Score>();
+            
         }   
 
 
@@ -48,6 +50,11 @@ public class Damageable : MonoBehaviour
         }
         else
         {
+            GameObject canvasInstance = GameObject.Find("Canvas(Clone)");
+            GameObject scoreTextObject = canvasInstance.transform.Find("scoreText").gameObject;
+            
+            scoreManager = scoreTextObject.GetComponent<Score>();
+            scoreManager.EndGame();
             Debug.Log("Ah me muero");
         }
     }
