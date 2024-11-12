@@ -35,7 +35,7 @@ public class EnemyFactory : MonoBehaviour
         StartCoroutine(InstantiateEnemiesWave(amount, enemyType, position));
     }
 
-    private IEnumerator InstantiateEnemiesWave(int amount, EnemyType enemyType, Vector3 position, float time = .6f)
+    private IEnumerator InstantiateEnemiesWave(int amount, EnemyType enemyType, Vector3 position, float time = .4f)
     {
         int count = 0;
         int i = 0;

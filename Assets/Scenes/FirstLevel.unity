@@ -1023,10 +1023,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1c56002433836946a105501ba924294, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 809371619}
-  spawnYPositionsArray:
-  - 30
-  - 60
+  spawnArray:
+  - spawnYPosition: 20
+    numberOfEnemies: 5
+    enemyType: 0
+  - spawnYPosition: 35
+    numberOfEnemies: 8
+    enemyType: 1
+  - spawnYPosition: 60
+    numberOfEnemies: 11
+    enemyType: 0
 --- !u!1 &992784901
 GameObject:
   m_ObjectHideFlags: 0
@@ -1339,7 +1345,7 @@ Transform:
   m_GameObject: {fileID: 1743867122}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4, y: 143.6, z: 4.1}
+  m_LocalPosition: {x: -0.4, y: 143.6, z: -6.1}
   m_LocalScale: {x: 1.4503833, y: 1.3869516, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

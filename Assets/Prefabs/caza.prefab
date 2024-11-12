@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 4052399103086679057}
   - component: {fileID: 6622463182316356955}
   - component: {fileID: 63320607246945936}
+  - component: {fileID: 1782560164421471894}
+  - component: {fileID: -6309065078372606301}
   m_Layer: 0
   m_Name: caza
   m_TagString: Untagged
@@ -146,4 +148,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88b8b4f744484b34f9c6ac786007d90d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifePoints: 10
+  totalLifePoints: 10
+  score: 15
+--- !u!95 &1782560164421471894
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5387114125922623828}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-6309065078372606301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5387114125922623828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2b31ad895f99074e93062de4388017f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 3
+  fireRate: 4

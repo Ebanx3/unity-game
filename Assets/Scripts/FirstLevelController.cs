@@ -4,27 +4,28 @@ using UnityEngine;
 public class FirstLevelController : MonoBehaviour
 {
     EnemyFactory enemyFactory;
-    [SerializeField] private new GameObject camera;
-    [SerializeField] private float[] spawnYPositionsArray;
-    [SerializeField] private Queue<float> spawnPositionsY;
+    new Camera camera;
+    [SerializeField] private EnemiesWave[] spawnArray;
+    [SerializeField] private Queue<EnemiesWave> spawnPositionsY;
 
     void Start()
     {
         enemyFactory = GetComponent<EnemyFactory>();
+        camera = Camera.main;
         spawnPositionsY = new();
-        for (int i = 0; i < spawnYPositionsArray.Length; i++)
+        for (int i = 0; i < spawnArray.Length; i++)
         {
-            spawnPositionsY.Enqueue(spawnYPositionsArray[i]);
+            spawnPositionsY.Enqueue(spawnArray[i]);
         }
     }
 
     void Update()
     {
-        if (spawnPositionsY.Count > 0 && camera.transform.position.y >= spawnPositionsY.Peek())
+        if (spawnPositionsY.Count > 0 && camera.transform.position.y >= spawnPositionsY.Peek().spawnYPosition)
         {
-            spawnPositionsY.Dequeue();
-            Vector3 spawnPosition = new(0, camera.transform.position.y + 20, 0);
-            enemyFactory.InstantiateEnemies(4, EnemyType.dron, spawnPosition);
+            EnemiesWave wave = spawnPositionsY.Dequeue();
+            Vector3 spawnPosition = new(0, camera.transform.position.y + 32, 0);
+            enemyFactory.InstantiateEnemies(wave.numberOfEnemies, wave.enemyType, spawnPosition);
         }
     }
 
