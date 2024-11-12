@@ -5,29 +5,20 @@ using UnityEngine;
 public class Damageable : MonoBehaviour
 {
     [SerializeField] private int totalLifePoints;
+    [SerializeField] private int score;
     private int actualLifePoints;
     private Animator animator;
     private bool isPlayer;
-    private Score scoreManager;
+
+    private Score scoreManager = null;
     
     void Start()
     {
         isPlayer = gameObject.CompareTag("Player");
         animator = GetComponent<Animator>();
         actualLifePoints = totalLifePoints;
-        if (!isPlayer)
-        {
-            GameObject canvasInstance = GameObject.Find("Canvas(Clone)");
-            GameObject scoreTextObject = canvasInstance.transform.Find("scoreText").gameObject;
-            
-            scoreManager = scoreTextObject.GetComponent<Score>();
-            
-        }   
 
-
-        
-
-    
+        if (!isPlayer) scoreManager = GameObject.Find("scoreText").GetComponent<Score>();
     }
 
     public void TakeDamage(int amount)
@@ -46,15 +37,11 @@ public class Damageable : MonoBehaviour
         if (!isPlayer)
         {
             StartCoroutine(DieCoroutine());
-            scoreManager.UpdateScore(10);
+            scoreManager.UpdateScore(score);
         }
         else
         {
-            GameObject canvasInstance = GameObject.Find("Canvas(Clone)");
-            GameObject scoreTextObject = canvasInstance.transform.Find("scoreText").gameObject;
-            
-            scoreManager = scoreTextObject.GetComponent<Score>();
-            scoreManager.EndGame();
+            // scoreManager.EndGame();
             Debug.Log("Ah me muero");
         }
     }
@@ -62,8 +49,10 @@ public class Damageable : MonoBehaviour
     IEnumerator DieCoroutine()
     {
         animator.SetBool("explosion", true);
+        gameObject.tag = "Defeated";
         yield return new WaitForSeconds(.3f);
         animator.SetBool("explosion", false);
+        gameObject.tag = "Enemy";
         actualLifePoints = totalLifePoints;
         gameObject.SetActive(false);
     }

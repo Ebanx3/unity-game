@@ -12,8 +12,8 @@ public class Language : MonoBehaviour
         dropdown.value = LocalizationSettings.SelectedLocale.SortOrder;
     }
 
-    public void ChangeLanguage(int index)
+    public void ChangeLanguage()
     {
-        LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[index];
+        LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[dropdown.value];
     }
 }

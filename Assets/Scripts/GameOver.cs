@@ -1,26 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 public class GameOver : MonoBehaviour
 {
-    public TextMeshProUGUI gameOverText;
-    void Start()
-    {
-        Debug.Log("Game Over empezando a funcionar");
+    public void GoToMenu () {
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void RestarrLevel(){
+
     }
-
-    public void Gameover()
-    {
-        gameOverText.gameObject.SetActive(false);
-    }
-
-
 }

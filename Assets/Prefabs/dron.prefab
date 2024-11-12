@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalLifePoints: 20
+  score: 10
 --- !u!114 &-5562726587793098990
 MonoBehaviour:
   m_ObjectHideFlags: 0
