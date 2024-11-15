@@ -32,7 +32,7 @@ public class Bullet : MonoBehaviour
     {
         if (collider.gameObject.CompareTag("Enemy"))
         {
-            collider.GetComponent<Damageable>().TakeDamage(damage);
+            collider.GetComponent<Enemy>().TakeDamage(damage);
             animator.SetTrigger("Collision");
             StartCoroutine(SetInactive());
         }

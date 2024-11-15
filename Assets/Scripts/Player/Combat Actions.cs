@@ -13,15 +13,17 @@ public class CombatActions : MonoBehaviour
     [Header("Escudo")]
 
     [SerializeField] private float shieldTime;
-    [SerializeField] private float shieldCoolDown;
     [HideInInspector] public bool activeShield = false;
-    private float sTimer;
     [SerializeField] private GameObject shield;
+
+    [Header("Shoot audio")]
+    [SerializeField] private AudioClip audioClip;
+    private AudioSource audioSource;
 
     private void Start()
     {
-        sTimer = shieldCoolDown;
         BulletsPool = GameObject.Find("BulletsPool").GetComponent<BulletPool>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -32,12 +34,8 @@ public class CombatActions : MonoBehaviour
             lastShootTime = 0;
         }
 
-        //Shield Cooldown...
         lastShootTime += Time.deltaTime;
-        sTimer += Time.deltaTime;
     }
-
-    //Mecanismo de Disparo///////////////////////////////////////////
 
     public void Shoot(InputAction.CallbackContext callback)
     {
@@ -57,6 +55,7 @@ public class CombatActions : MonoBehaviour
         {
             GameObject bullet = BulletsPool.InstantiateBullet();
             bullet.transform.position = transform.position + Vector3.up;
+            audioSource.Play();
         }
     }
 
@@ -64,13 +63,7 @@ public class CombatActions : MonoBehaviour
 
     public void Activate_Shield(InputAction.CallbackContext callback)
     {
-        if (callback.performed)
-        {
-            if (sTimer >= shieldCoolDown)
-            {
-                StartCoroutine(ShieldAction());
-            }
-        }
+        if (callback.performed) StartCoroutine(ShieldAction());
     }
 
     public IEnumerator ShieldAction()
@@ -80,7 +73,6 @@ public class CombatActions : MonoBehaviour
         yield return new WaitForSeconds(shieldTime);
         activeShield = false;
         shield.SetActive(false);
-        sTimer = 0f;
     }
 
 }

@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
@@ -33,7 +32,7 @@ public class EnemyBullet : MonoBehaviour
     {
         if (collider.gameObject.CompareTag("Player"))
         {
-            collider.GetComponent<Damageable>().TakeDamage(damage);
+            collider.GetComponent<Player>().TakeDamage(damage);
             animator.SetTrigger("Collision");
             StartCoroutine(SetInactive());
         }

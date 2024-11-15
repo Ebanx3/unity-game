@@ -237,7 +237,6 @@ GameObject:
   - component: {fileID: 314620651}
   - component: {fileID: 314620652}
   - component: {fileID: 314620653}
-  - component: {fileID: 314620654}
   m_Layer: 0
   m_Name: plane
   m_TagString: Player
@@ -528,23 +527,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 314620642}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88b8b4f744484b34f9c6ac786007d90d, type: 3}
+  m_Script: {fileID: 11500000, guid: d334a6a3c3411094d822aa0974666518, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   totalLifePoints: 50
-  score: 0
---- !u!114 &314620654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 314620642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceec41879bf6bf04eb24f3d07eb089d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &384741547
 GameObject:
   m_ObjectHideFlags: 0
@@ -1009,8 +995,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dronPrefab: {fileID: 1375817016214995247, guid: af5db999450535743b03838ea215cf13, type: 3}
   cazaPrefab: {fileID: 5387114125922623828, guid: 3f4abfdf9a2b33a4fbc4a65631774568, type: 3}
-  drons: []
-  cazas: []
+  enemies: []
 --- !u!114 &886257422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1025,13 +1010,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnArray:
   - spawnYPosition: 20
-    numberOfEnemies: 5
-    enemyType: 0
-  - spawnYPosition: 35
-    numberOfEnemies: 8
+    numberOfEnemies: 2
     enemyType: 1
-  - spawnYPosition: 60
-    numberOfEnemies: 11
+  - spawnYPosition: 28
+    numberOfEnemies: 3
+    enemyType: 1
+  - spawnYPosition: 35
+    numberOfEnemies: 3
     enemyType: 0
 --- !u!1 &992784901
 GameObject:
@@ -1675,7 +1660,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2044427817
 Transform:
   m_ObjectHideFlags: 0
@@ -1801,7 +1786,7 @@ Transform:
   m_GameObject: {fileID: 2046735429}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 140.39, z: 51.4}
+  m_LocalPosition: {x: 0, y: 140.39, z: 50}
   m_LocalScale: {x: 7, y: 6.52, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

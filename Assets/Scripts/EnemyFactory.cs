@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public enum EnemyType { dron, caza }
@@ -9,8 +10,7 @@ public class EnemyFactory : MonoBehaviour
     [SerializeField] private GameObject dronPrefab;
     [SerializeField] private GameObject cazaPrefab;
 
-    [SerializeField] private List<GameObject> drons;
-    [SerializeField] private List<GameObject> cazas;
+    [SerializeField] private List<GameObject> enemies;
 
     void Start()
     {
@@ -18,14 +18,14 @@ public class EnemyFactory : MonoBehaviour
         {
             GameObject dron = Instantiate(dronPrefab);
             dron.SetActive(false);
-            drons.Add(dron);
+            enemies.Add(dron);
             dron.transform.parent = transform;
         }
         for (int i = 0; i < 16; i++)
         {
             GameObject caza = Instantiate(cazaPrefab);
             caza.SetActive(false);
-            cazas.Add(caza);
+            enemies.Add(caza);
             caza.transform.parent = transform;
         }
     }
@@ -35,28 +35,24 @@ public class EnemyFactory : MonoBehaviour
         StartCoroutine(InstantiateEnemiesWave(amount, enemyType, position));
     }
 
-    private IEnumerator InstantiateEnemiesWave(int amount, EnemyType enemyType, Vector3 position, float time = .4f)
+    private IEnumerator InstantiateEnemiesWave(int amount, EnemyType enemyType, Vector3 position, float time = .5f)
     {
         int count = 0;
         int i = 0;
-        while(i < drons.Count && count < amount)
+
+        while (i < enemies.Count && count < amount)
         {
-            if (!drons[i].activeSelf)
+            if (!enemies[i].activeSelf && enemyType == enemies[i].GetComponent<Enemy>().enemyType)
             {
-                if (enemyType == EnemyType.dron)
-                {
-                    drons[i].SetActive(true);
-                    drons[i].transform.position = position;
-                }
-                else
-                {
-                    cazas[i].SetActive(true);
-                    cazas[i].transform.position = position;
-                }
+                enemies[i].SetActive(true);
+                enemies[i].transform.position = position;
                 yield return new WaitForSeconds(time);
                 count++;
             }
             i++;
         }
+
+
+
     }
 }

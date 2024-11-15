@@ -24,7 +24,7 @@ public class FirstLevelController : MonoBehaviour
         if (spawnPositionsY.Count > 0 && camera.transform.position.y >= spawnPositionsY.Peek().spawnYPosition)
         {
             EnemiesWave wave = spawnPositionsY.Dequeue();
-            Vector3 spawnPosition = new(0, camera.transform.position.y + 32, 0);
+            Vector3 spawnPosition = new(0, camera.transform.position.y + 20, 0);
             enemyFactory.InstantiateEnemies(wave.numberOfEnemies, wave.enemyType, spawnPosition);
         }
     }
