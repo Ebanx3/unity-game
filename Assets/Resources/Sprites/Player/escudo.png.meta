@@ -1,13 +1,16 @@
 fileFormatVersion: 2
-guid: 1ef4c342153de9547b42ba642cdb390f
+guid: 615e3b07a0401c945b07fe49430e54de
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8965426255969295163
-    second: plane1_0
+      213: -3803196367135801590
+    second: escudo_0
   - first:
-      213: 9119402810999600757
-    second: plane1_1
+      213: -5001411350557873730
+    second: escudo_1
+  - first:
+      213: -4634772184130304362
+    second: escudo_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -129,43 +132,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: plane1_0
+      name: escudo_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 36
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5c46df03258649380800000000000000
-      internalID: -8965426255969295163
+      spriteID: ddc5c19471028c34aab02c3a29580d13
+      internalID: -20145698
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plane1_1
+      name: escudo_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 36
         y: 0
-        width: 32
-        height: 32
+        width: 36
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 57674593a80ae8e70800000000000000
-      internalID: 9119402810999600757
+      spriteID: 612c35520d9843743b6b492b38e55adb
+      internalID: 740172034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: escudo_2
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 0
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15f233d9156937246bf029c04eae269b
+      internalID: 1706553606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: escudo_3
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 0
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a936884b3b99377429286be960791b9e
+      internalID: -249377675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: escudo_4
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b41827ecc0dda1043bd7d07c658e195b
+      internalID: 1196224530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: escudo_5
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 0
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66bff4e9a5745dc4d9a2b48bdb727920
+      internalID: -796903144
       vertices: []
       indices: 
       edges: []
@@ -173,7 +260,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: a70c7f6758602da4ca302499428f8f4e
+    spriteID: 796d89458469a4e4db50b910fc3d9773
     internalID: 0
     vertices: []
     indices: 
@@ -181,8 +268,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      plane1_0: -8965426255969295163
-      plane1_1: 9119402810999600757
+      escudo_0: -20145698
+      escudo_1: 740172034
+      escudo_2: 1706553606
+      escudo_3: -249377675
+      escudo_4: 1196224530
+      escudo_5: -796903144
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class StartLevel : MonoBehaviour
 {
-    [SerializeField] private GameObject canvasPrefab;
+    [SerializeField] private GameObject canvas;
 
     private GameObject player;
     private bool startingLevel;
@@ -24,7 +24,7 @@ public class StartLevel : MonoBehaviour
         startingLevel = true;
         yield return new WaitForSeconds(1.2f);
         startingLevel = false;
-        Instantiate(canvasPrefab, transform.position, Quaternion.identity); 
+        canvas.SetActive(true);
         player.GetComponent<Movement>().enabled = true;
         this.enabled = false;
     }

@@ -25,7 +25,7 @@ public class Bullet : MonoBehaviour
 
         timer += Time.deltaTime;
 
-        transform.position = new Vector3(transform.position.x, transform.position.y + speed * Time.deltaTime, 0);
+        transform.position = new Vector3(transform.position.x, transform.position.y + speed * Time.deltaTime, -9.5f);
     }
 
     void OnTriggerEnter2D(Collider2D collider)

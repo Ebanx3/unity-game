@@ -14,6 +14,9 @@ TextureImporter:
   - first:
       213: -593825150615284814
     second: explosion_plane-Sheet_3
+  - first:
+      213: 3079710291383468068
+    second: explosion_plane-Sheet_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +49,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -60,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -84,7 +87,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -138,9 +141,9 @@ TextureImporter:
       name: explosion_plane-Sheet_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 0
-        width: 28
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -161,7 +164,7 @@ TextureImporter:
         serializedVersion: 2
         x: 32
         y: 0
-        width: 31
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -180,9 +183,9 @@ TextureImporter:
       name: explosion_plane-Sheet_2
       rect:
         serializedVersion: 2
-        x: 63
+        x: 64
         y: 0
-        width: 36
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -201,10 +204,10 @@ TextureImporter:
       name: explosion_plane-Sheet_3
       rect:
         serializedVersion: 2
-        x: 98
-        y: 2
-        width: 29
-        height: 26
+        x: 96
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,7 +224,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 12a2e34be4e151342b4d361c1fcc5e90
     internalID: 0
     vertices: []
     indices: 

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] private int totalLifePoints;
+    [SerializeField] private GameObject gameOverPanel;
     private SpriteRenderer sprite;
     private int actualLifePoints;
     private Animator animator;
@@ -32,7 +33,7 @@ public class Player : MonoBehaviour
     private void Die()
     {
         StartCoroutine(DieCoroutine());
-        Debug.Log("Ah me muero");
+        gameOverPanel.SetActive(true);
     }
 
     IEnumerator ChangeColorByDamage()
