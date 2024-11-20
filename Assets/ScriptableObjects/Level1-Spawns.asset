@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02566df0e79433d4f906e6d8934f548c, type: 3}
+  m_Name: Level1-Spawns
+  m_EditorClassIdentifier: 
+  enemiesWaves:
+  - spawnYPosition: 30
+    numberOfEnemies: 3
+    enemyType: 1
+  - spawnYPosition: 45
+    numberOfEnemies: 4
+    enemyType: 1
+  - spawnYPosition: 65
+    numberOfEnemies: 4
+    enemyType: 1
+  - spawnYPosition: 70
+    numberOfEnemies: 6
+    enemyType: 1
+  - spawnYPosition: 100
+    numberOfEnemies: 2
+    enemyType: 1
+  - spawnYPosition: 100
+    numberOfEnemies: 2
+    enemyType: 1
+  - spawnYPosition: 125
+    numberOfEnemies: 8
+    enemyType: 1
+  - spawnYPosition: 140
+    numberOfEnemies: 6
+    enemyType: 1

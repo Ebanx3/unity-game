@@ -16,13 +16,13 @@ public class CombatActions : MonoBehaviour
     [HideInInspector] public bool activeShield = false;
     [SerializeField] private GameObject shield;
 
-    [Header("Shoot audio")]
-    [SerializeField] private AudioClip audioClip;
     private AudioSource audioSource;
+    private Player player;
 
     private void Start()
     {
         BulletsPool = GameObject.Find("BulletsPool").GetComponent<BulletPool>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -63,12 +63,13 @@ public class CombatActions : MonoBehaviour
 
     public void Activate_Shield(InputAction.CallbackContext callback)
     {
-        if (callback.performed) StartCoroutine(ShieldAction());
+        if (callback.performed && player.GetShields() > 0) StartCoroutine(ShieldAction());
     }
 
     public IEnumerator ShieldAction()
     {
         shield.SetActive(true);
+        player.UseShield();
         activeShield = true;
         yield return new WaitForSeconds(shieldTime);
         activeShield = false;

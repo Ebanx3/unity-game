@@ -10,10 +10,15 @@ public class EnemyFactory : MonoBehaviour
     [SerializeField] private GameObject dronPrefab;
     [SerializeField] private GameObject cazaPrefab;
 
+    private new Camera camera;
+    private Vector2 screenBounds;
+
     [SerializeField] private List<GameObject> enemies;
 
     void Start()
     {
+        camera = Camera.main;
+        screenBounds = camera.GetComponent<CameraMovement>().ScreenBounds;
         for (int i = 0; i < 16; i++)
         {
             GameObject dron = Instantiate(dronPrefab);
@@ -30,12 +35,17 @@ public class EnemyFactory : MonoBehaviour
         }
     }
 
-    public void InstantiateEnemies(int amount, EnemyType enemyType, Vector3 position)
+    public void InstantiateEnemies(int amount, EnemyType enemyType)
     {
-        StartCoroutine(InstantiateEnemiesWave(amount, enemyType, position));
+        StartCoroutine(InstantiateEnemiesWave(amount, enemyType));
     }
 
-    private IEnumerator InstantiateEnemiesWave(int amount, EnemyType enemyType, Vector3 position, float time = .5f)
+    private float getRandomXValue() {
+        float x = Random.Range(-screenBounds.x,screenBounds.x);
+        return x;
+    }
+
+    private IEnumerator InstantiateEnemiesWave(int amount, EnemyType enemyType, float time = .4f)
     {
         int count = 0;
         int i = 0;
@@ -45,7 +55,7 @@ public class EnemyFactory : MonoBehaviour
             if (!enemies[i].activeSelf && enemyType == enemies[i].GetComponent<Enemy>().enemyType)
             {
                 enemies[i].SetActive(true);
-                enemies[i].transform.position = position;
+                enemies[i].transform.position = new Vector3(getRandomXValue(), camera.transform.position.y + screenBounds.y , -9.5f);
                 yield return new WaitForSeconds(time);
                 count++;
             }

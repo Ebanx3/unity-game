@@ -6,15 +6,22 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private int totalLifePoints;
     [SerializeField] private GameObject gameOverPanel;
+    [SerializeField] private GameObject controllersPanel;
     private SpriteRenderer sprite;
     private int actualLifePoints;
+    private int actualShields;
     private Animator animator;
     private bool invulnerable = false;
 
+    [SerializeField] private GameObject lifeBarGO;
+    private LifeBar lifeBar;
+
     void Start()
     {
+        lifeBar = lifeBarGO.GetComponent<LifeBar>();
         animator = GetComponent<Animator>();
         actualLifePoints = totalLifePoints;
+        actualShields = 2;
         sprite = GetComponent<SpriteRenderer>();
     }
 
@@ -23,6 +30,7 @@ public class Player : MonoBehaviour
         if (invulnerable || GetComponent<CombatActions>().activeShield) return;
 
         actualLifePoints -= amount;
+        lifeBar.UpdateLife(totalLifePoints,actualLifePoints);
         StartCoroutine(ChangeColorByDamage());
         if (actualLifePoints <= 0)
         {
@@ -33,7 +41,7 @@ public class Player : MonoBehaviour
     private void Die()
     {
         StartCoroutine(DieCoroutine());
-        gameOverPanel.SetActive(true);
+        
     }
 
     IEnumerator ChangeColorByDamage()
@@ -48,12 +56,30 @@ public class Player : MonoBehaviour
     IEnumerator DieCoroutine()
     {
         animator.SetBool("explosion", true);
-        yield return new WaitForSeconds(.3f);
+        Time.timeScale = .5f;
+        yield return new WaitForSeconds(.5f);
+        gameOverPanel.SetActive(true);
+        controllersPanel.SetActive(false);
         gameObject.SetActive(false);
+        
     }
 
     public float RelationTotalActualLP()
     {
         return (float)actualLifePoints / (float)totalLifePoints;
+    }
+
+    public int GetShields(){
+        return actualShields;
+    }
+
+    public void UseShield(){
+        actualShields -= 1;
+        lifeBar.UpdateShields(actualShields);
+    }
+
+    public void AddShield(){
+        actualShields = 2;
+        lifeBar.UpdateShields(actualShields);
     }
 }

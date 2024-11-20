@@ -5,7 +5,7 @@ public class FirstLevelController : MonoBehaviour
 {
     EnemyFactory enemyFactory;
     new Camera camera;
-    [SerializeField] private EnemiesWave[] spawnArray;
+    [SerializeField] private LevelSpawnsData levelSpawnsData;
     [SerializeField] private Queue<EnemiesWave> spawnPositionsY;
 
     void Start()
@@ -13,9 +13,9 @@ public class FirstLevelController : MonoBehaviour
         enemyFactory = GetComponent<EnemyFactory>();
         camera = Camera.main;
         spawnPositionsY = new();
-        for (int i = 0; i < spawnArray.Length; i++)
+        for (int i = 0; i < levelSpawnsData.enemiesWaves.Length; i++)
         {
-            spawnPositionsY.Enqueue(spawnArray[i]);
+            spawnPositionsY.Enqueue(levelSpawnsData.enemiesWaves[i]);
         }
     }
 
@@ -24,8 +24,7 @@ public class FirstLevelController : MonoBehaviour
         if (spawnPositionsY.Count > 0 && camera.transform.position.y >= spawnPositionsY.Peek().spawnYPosition)
         {
             EnemiesWave wave = spawnPositionsY.Dequeue();
-            Vector3 spawnPosition = new(0, camera.transform.position.y + 20, -9.4f);
-            enemyFactory.InstantiateEnemies(wave.numberOfEnemies, wave.enemyType, spawnPosition);
+            enemyFactory.InstantiateEnemies(wave.numberOfEnemies, wave.enemyType);
         }
     }
 
